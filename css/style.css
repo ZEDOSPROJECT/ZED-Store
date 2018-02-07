@@ -1,0 +1,102 @@
+body{
+    margin:0px;
+    border:0px;
+    background-color:rgba(128, 128, 128, 0.514);
+} 
+
+#Title{
+    background-color:rgb(98, 122, 255);
+    width:100%;
+    height:60px;
+    padding:20px;
+}
+
+/************** FONTS ****************/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+html{font-size: 62.5%; font-family: 'Open Sans', sans-serif;}
+h1{font-size: 3rem; margin-bottom: 1rem;}
+h2{font-size: 1.6rem;}
+header{position: relative; background: #ddd;}
+main{padding: 2rem;}
+/************ NAVIGATION *******************/
+nav,
+nav ul{display: flex;}
+nav ul,
+nav li{flex: 1;}
+nav a{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  font-size: 1.8rem;
+}
+nav a:hover{
+  background: #ccc;
+  color: #fff;
+}
+
+/*************** DESIGN ******************/
+nav ul{
+  flex-wrap: wrap; 
+  max-width: 1080px; 
+	margin: 0 auto;
+}
+nav li{
+  position: relative;
+  line-height: 50px;
+  color: #888;
+  text-align: center;
+}  
+nav input,
+nav label{
+  display: none;
+  width: 70px; 
+  height: 50px; 
+  background: #777; 
+  color: #fff; 
+  text-align: center; 
+  line-height: 50px;
+  font-size: 1.6rem;
+} 
+nav label:hover{cursor:pointer;}
+
+/******************** MEDIA QUERIES *********************/
+@media only screen and (max-width: 1080px){
+  
+  header{background: none;}
+  nav li{flex: none; background: #ddd;} 
+  nav li:nth-child(1n+1){width: 20%;}
+  nav li:nth-child(1n+6){display: none; width: 100%;}      
+  nav input[type="checkbox"]:checked + ul li:nth-child(1n+6){
+    display: block;
+    width: 100%;
+ //   background: purple;          
+  }
+  nav label{display: block;}   
+}
+@media only screen and (max-width: 960px){
+  nav li:nth-child(1n+1){width: 25%;}
+  nav li:nth-child(1n+5){display: none; width: 100%;}
+  nav input[type="checkbox"]:checked + ul li:nth-child(1n+5){
+    display: block;
+    width: 100%;
+  //  background: purple; 
+  }
+}
+@media only screen and (max-width: 720px){
+  nav li:nth-child(1n+1){width: 33.33333%;}
+  nav li:nth-child(1n+4){display: none; width: 100%;}
+  nav input[type="checkbox"]:checked + ul li:nth-child(1n+4){
+    display: block;
+    width: 100%;
+ //   background: purple; 
+  }
+}
+@media only screen and (max-width: 480px){
+  nav li:nth-child(1n+1){width: 50%;}
+  nav li:nth-child(1n+3){display: none; width: 100%;}
+  nav input[type="checkbox"]:checked + ul li:nth-child(1n+3){
+    display: block;
+    width: 100%;
+  //  background: purple; 
+  }
+}
