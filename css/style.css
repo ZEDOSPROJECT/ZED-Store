@@ -1,102 +1,98 @@
-body{
-    margin:0px;
-    border:0px;
-    background-color:rgba(128, 128, 128, 0.514);
-} 
-
-#Title{
-    background-color:rgb(98, 122, 255);
-    width:100%;
-    height:60px;
-    padding:20px;
+body {
+    background-color: rgb(236, 236, 236);
+    margin: 0;
 }
 
-/************** FONTS ****************/
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
-html{font-size: 62.5%; font-family: 'Open Sans', sans-serif;}
-h1{font-size: 3rem; margin-bottom: 1rem;}
-h2{font-size: 1.6rem;}
-header{position: relative; background: #ddd;}
-main{padding: 2rem;}
-/************ NAVIGATION *******************/
-nav,
-nav ul{display: flex;}
-nav ul,
-nav li{flex: 1;}
-nav a{
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  font-size: 1.8rem;
-}
-nav a:hover{
-  background: #ccc;
-  color: #fff;
+.appHead{
+    width: 100%;
+    height: 120px;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
 }
 
-/*************** DESIGN ******************/
-nav ul{
-  flex-wrap: wrap; 
-  max-width: 1080px; 
-	margin: 0 auto;
+.appIcon {
+    float: left;
 }
-nav li{
-  position: relative;
-  line-height: 50px;
-  color: #888;
-  text-align: center;
-}  
-nav input,
-nav label{
-  display: none;
-  width: 70px; 
-  height: 50px; 
-  background: #777; 
-  color: #fff; 
-  text-align: center; 
-  line-height: 50px;
-  font-size: 1.6rem;
-} 
-nav label:hover{cursor:pointer;}
 
-/******************** MEDIA QUERIES *********************/
-@media only screen and (max-width: 1080px){
+.appScreens{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(221, 221, 221);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.appTitle{
+    font-size: 40px;
+    padding-top: 10px;
+}
+
+.appDescription {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 20px;
+    height: 60%;
+    overflow-y: scroll;
+}
+
+.butn {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+  }
   
-  header{background: none;}
-  nav li{flex: none; background: #ddd;} 
-  nav li:nth-child(1n+1){width: 20%;}
-  nav li:nth-child(1n+6){display: none; width: 100%;}      
-  nav input[type="checkbox"]:checked + ul li:nth-child(1n+6){
-    display: block;
-    width: 100%;
- //   background: purple;          
+  .butn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
   }
-  nav label{display: block;}   
-}
-@media only screen and (max-width: 960px){
-  nav li:nth-child(1n+1){width: 25%;}
-  nav li:nth-child(1n+5){display: none; width: 100%;}
-  nav input[type="checkbox"]:checked + ul li:nth-child(1n+5){
-    display: block;
-    width: 100%;
-  //  background: purple; 
+
+
+  .butnR {
+    background: #d93434;
+    background-image: -webkit-linear-gradient(top, #d93434, #990f0f);
+    background-image: -moz-linear-gradient(top, #d93434, #990f0f);
+    background-image: -ms-linear-gradient(top, #d93434, #990f0f);
+    background-image: -o-linear-gradient(top, #d93434, #990f0f);
+    background-image: linear-gradient(to bottom, #d93434, #990f0f);
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
   }
-}
-@media only screen and (max-width: 720px){
-  nav li:nth-child(1n+1){width: 33.33333%;}
-  nav li:nth-child(1n+4){display: none; width: 100%;}
-  nav input[type="checkbox"]:checked + ul li:nth-child(1n+4){
-    display: block;
-    width: 100%;
- //   background: purple; 
+  
+  .butnR:hover {
+    background: #fc3c3c;
+    background-image: -webkit-linear-gradient(top, #fc3c3c, #630707);
+    background-image: -moz-linear-gradient(top, #fc3c3c, #630707);
+    background-image: -ms-linear-gradient(top, #fc3c3c, #630707);
+    background-image: -o-linear-gradient(top, #fc3c3c, #630707);
+    background-image: linear-gradient(to bottom, #fc3c3c, #630707);
+    text-decoration: none;
   }
-}
-@media only screen and (max-width: 480px){
-  nav li:nth-child(1n+1){width: 50%;}
-  nav li:nth-child(1n+3){display: none; width: 100%;}
-  nav input[type="checkbox"]:checked + ul li:nth-child(1n+3){
-    display: block;
-    width: 100%;
-  //  background: purple; 
-  }
-}
