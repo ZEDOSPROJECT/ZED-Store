@@ -1,6 +1,5 @@
 <?php
     $APPNAME=$_GET["APPNAME"];
-    $IS_INSTALLED=false;
 ?>
 
 <HTML>
@@ -22,7 +21,7 @@
             <?php
                 echo('<IMG class="appIcon" width="120" src="DIRECTORY/'.$APPNAME.'/favicon.png" />');
                 echo('<div class="appTitle"><b>'.$APPNAME.'</b></div>');
-                if($IS_INSTALLED){
+                if(isset($_GET["isInstalled"])){
                     echo('<button onClick="uninstall()" class="butnR">Remove</button>');
                 }else{
                     echo('<button onClick="install()" class="butn">Install</button>');
