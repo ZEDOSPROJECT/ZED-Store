@@ -36,6 +36,11 @@ body {
     overflow-y: scroll;
 }
 
+.goBack {
+  background-color: royalblue;
+  cursor: pointer;
+}
+
 .butn {
     background: #3498db;
     background-image: -webkit-linear-gradient(top, #3498db, #2980b9);

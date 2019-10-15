@@ -10,13 +10,16 @@
         <script>
             function install(){
                 console.log("SYSCALL:INSTALL:"+document.title);
+                window.history.back();
             }
             function uninstall(){
                 console.log("SYSCALL:UNINSTALL:"+document.title);
+                window.history.back();
             }
         </script>
     </HEAD>
     <BODY>
+        <button class="goBack" onClick="window.history.back();">GO BACK</button>
         <div class="appHead">
             <?php
                 echo('<IMG class="appIcon" width="120" src="DIRECTORY/'.$APPNAME.'/favicon.png" />');
