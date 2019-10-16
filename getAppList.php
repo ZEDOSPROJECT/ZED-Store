@@ -1,6 +1,5 @@
 <?php
     $dir          = "./DIRECTORY"; //path
-
     $list = array(); //main array
 
     if(is_dir($dir)){
@@ -13,7 +12,13 @@
                     $list3 = array(
                     'file' => $file, 
                     'size' => filesize($file));
-                    array_push($list, $list3);
+                    if($_GET["type"]=="all"){
+                        array_push($list, $list3);
+                    }else{
+                        if(file_get_contents("./DIRECTORY/".$file."/type")==$_GET['type']){
+                            array_push($list, $list3);
+                        }
+                    }
                 }
             }
         }
