@@ -1,4 +1,6 @@
 <?php
+    header("Access-Control-Allow-Origin: *");
+
     $dir          = "./DIRECTORY"; //path
     $list = array(); //main array
 
